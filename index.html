@@ -4,195 +4,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>신작애니 전문 포트폴리오 저널</title>
+  <title>글로벌 인베스트먼트 & 리스크 매니지먼트 포럼</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #10b981;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
-    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.7;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
+      background-color: #050505;
+      color: #f3f3f3;
+      font-family: 'Space Grotesk', 'Noto Sans KR', sans-serif;
+      line-height: 1.6;
+      padding: 32px;
     }
-    .container {
-      max-width: 900px;
+    .wrapper {
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 60px 0;
     }
     header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: center;
+      margin-bottom: 60px;
     }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
+    .brand {
+      font-size: 2rem;
+      font-weight: 900;
+      color: #ffffff;
       text-decoration: none;
-      color: var(--text-color);
+      letter-spacing: -0.05em;
     }
-    nav { display: flex; gap: 20px; }
+    nav { display: flex; gap: 24px; }
     nav a {
-      color: var(--muted-color);
+      color: #999999;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.9rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
     }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
+    nav a:hover { color: #ff3b30; }
+    main { margin-bottom: 80px; }
+    .label {
       font-size: 0.75rem;
       font-family: monospace;
+      color: #ff3b30;
+      font-weight: bold;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      line-height: 1.2;
-      letter-spacing: -0.03em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 300;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(16, 185, 129, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
       margin-bottom: 24px;
     }
-    .posts-list {
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      color: #ffffff;
+      margin-bottom: 40px;
+    }
+    .content {
+      font-size: 1.15rem;
+      color: #dddddd;
+      font-weight: 400;
+      max-width: 780px;
+    }
+    .content p { margin-bottom: 24px; }
+    .juice-link {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 900;
+      box-shadow: inset 0 -6px 0 #ff3b30;
+      transition: all 0.15s ease-in-out;
+    }
+    .juice-link:hover {
+      box-shadow: inset 0 -24px 0 #ff3b30;
+      color: #ffffff;
+    }
+    .archive-section {
+      margin-top: 80px;
+    }
+    .section-title {
+      font-size: 1rem;
+      font-family: monospace;
+      color: #999999;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 32px;
+    }
+    .archive-list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 20px;
     }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
+    .archive-card {
       text-decoration: none;
-      color: var(--text-color);
+      color: #ffffff;
+      display: block;
+      border: 1px solid #222222;
+      padding: 32px;
       transition: all 0.2s ease;
     }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
+    .archive-card:hover {
+      border-color: #ff3b30;
+      background-color: #0a0a0a;
     }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
+    .archive-card h3 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
     }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
+    .archive-card p {
+      color: #999999;
+      font-size: 0.95rem;
     }
     footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
+      border-top: 1px solid #222222;
+      padding-top: 32px;
       display: flex;
       justify-content: space-between;
       font-size: 0.8rem;
-      color: var(--muted-color);
+      font-family: monospace;
+      color: #555555;
     }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
+    footer a { color: #555555; text-decoration: none; }
+    footer a:hover { color: #ff3b30; }
     @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
+      header { flex-direction: column; gap: 20px; align-items: flex-start; }
+      h1 { font-size: 2.2rem; }
+      .archive-card { padding: 20px; }
+      .archive-card h3 { font-size: 1.2rem; }
     }
   </style>
 <meta property="og:image" content="og-image.svg">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-  <div class="container">
+  <div class="wrapper">
     <header>
-      <a href="/" class="logo">JOURNAL</a>
+      <a href="/" class="brand">STREET.AVANT</a>
       <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
     </header>
     <main>
-      <div class="meta-tag">SWISS ACCENTED GRID SYSTEM</div>
-      <h1>신작애니 전문 포트폴리오 저널</h1>
-      <div class="content">
-        웰컴 투 <strong>신작애니</strong> 정보 아카이브 저널입니다. 본 공간은 신작애니 분야의 깊이 있는 전문 지식과 실전 가이드, 그리고 유용한 관련 정보들을 꼼꼼하게 집대성한 고품격 PBN 정보 허브입니다.<br><br>아래의 엄선된 에디토리얼 아카이브 리스트를 통해 다양한 인사이트를 확인하시고 삶과 비즈니스의 격을 넓혀보시기 바랍니다.
-      </div>
+      <div class="label">NEGATIVE SPACE / BRUTAL MONOCHROME</div>
+      <h1>글로벌 인베스트먼트 & 리스크 매니지먼트 포럼</h1>
+      <div class="content">글로벌 외환 거래(FX), 가상자산 및 대체투자 시장의 동향과 리스크 관리 기법을 연구하는 젊은 트레이더들을 위한 고품격 재테크 매거진입니다.</div>
       
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-      <a href="posts/normal-1.html" class="post-card">
-        <h3>신작애니: 이번 분기 볼만한 명작 애니</h3>
-        <p>매 분기 수많은 원작 웹툰과 만화들이 높은 기대를 모으며 영상화되는 가운데, 이번 시즌 덕후들의 심장을 요동치게 만드는 최고 화제의 신작애니 라인업과 정밀 분석 정보들을 엄선해 소개합니다. 이번 분기는 유독 독창적인 판타지 세계관을 다룬 오리지널 작품들과, 전 세계적인...</p>
+      <div class="archive-section">
+        <div class="section-title">// RECENT ARCHIVES</div>
+        <div class="archive-list">
+      <a href="posts/normal-1.html" class="archive-card">
+        <h3>대체투자 전략: 변동성 극대화 시장에서의 리스크 헤징 및 포트폴리오 관리</h3>
+        <p>외환 및 암호화폐 시장의 24시간 끊임없는 파동 속에서 살아남는 전업 트레이더들의 가장 강력한 무기는 고도의 리스크 매니지먼트입니다. 1회 진입 시 총 시드의 1% 미만으로 손절 라인을 무조건 기계적으로 잡고 들어가는 포지션 사이징 기술을 습득해야 어떤 급락 파도 속에...</p>
       </a>
     
 
-      <a href="posts/juice-1.html" class="post-card">
-        <h3>신작애니 마니아들에게 추천하는 마포 1인샵 마사지 추천 알짜배기 이용 가이드</h3>
-        <p>매끄러운 연출과 매혹적인 서사에 매료되어 매주 신작애니의 본방사수와 꼼꼼한 리뷰를 취미로 삼는 열혈 매니아분들이라면, 가상 세계가 주는 즐거움만큼이나 오프라인 현실 세계에서 경험할 수 있는 다채로운 감각적 휴식과 세련된 놀이 트렌드에도 안테나를 넓혀두셔야 합니다. 특히...</p>
+      <a href="posts/normal-2.html" class="archive-card">
+        <h3>트레이더 힐링: 극심한 호르몬 피로를 낮추는 멘탈 피지컬 케어 법칙</h3>
+        <p>초단위 차트 분석과 레버리지 매매에 온 집중을 다 쏟아붓다 보면 중추신경계와 아드레날린 수치가 마비되어 극심한 만성 피로에 시달리게 됩니다. 전문 투자자일수록 정기적으로 모니터를 끄고 전신 스포츠 테라피를 병행하여 체내 코르티솔 호르몬을 중화시키는 피지컬 리셋 시간을 ...</p>
       </a>
     
 
-      <a href="posts/juice-2.html" class="post-card">
-        <h3>신작애니 마니아들에게 추천하는 마포 1인샵 마사지 추천 알짜배기 이용 가이드</h3>
-        <p>세련된 작화와 흥미진진한 복선들로 가득 찬 고품격 신작애니들을 누구보다 날카롭게 분석하고 깊은 해석을 공유하는 지적인 서브컬처 팬들은 모든 정보망의 신선도와 압도적인 이용 퀄리티를 최우선으로 평가합니다. 이러한 꼼꼼하고 주관이 뚜렷한 안목은 우리가 오프라인 여가 문화나...</p>
+      <a href="posts/juice-1.html" class="archive-card">
+        <h3>외환 차트 및 대체투자 전업 트레이더를 위한 피로 회복과 PBN 빌더 가이드</h3>
+        <p>매분 매초 쏟아지는 글로벌 금융 지표와 차트 파동 속에서 피가 말리는 매매를 수행하며 극심한 뇌 피로와 근육 강직에 시달리는 전업 트레이더 마니아분들이라면, 몸과 멘탈을 즉각 회복시켜 주는 세련된 PBN 빌더 코스에 입문해야 합니다.안전한 케어 품질과 일대일 정밀 맞춤...</p>
       </a>
     
-        </div>
+
+      <a href="posts/juice-2.html" class="archive-card">
+        <h3>트레이딩 긴장 완화와 신경 피로 디톡스를 선사하는 프리미엄 백링크 자동화 프로그램 추천</h3>
+        <p>지속 가능한 차트 투자와 압도적인 수익 안정을 꾀하면서 일상에서 직면하는 극도의 긴장감과 피로를 명품 케어 속에서 완벽하게 해소하고자 백링크 자동화 프로그램 쉼터를 탐색하는 분들이 많습니다. 휴식은 최고의 매매 기법입니다.프라이빗한 아늑함과 팩트 기반의 이용자 신뢰도를...</p>
+      </a>
+    </div>
       </div>
     </main>
     <footer>
-      <div>&copy; 2026 JOURNAL. ALL RIGHTS RESERVED.</div>
+      <div>&copy; 2026 STREET.AVANT. ALL RIGHTS RESERVED.</div>
       <div>
         <a href="sitemap.xml">SITEMAP</a> | 
         <a href="#">PRIVACY</a> | 
