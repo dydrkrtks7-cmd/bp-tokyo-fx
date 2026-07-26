@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1.07 패치로 증발한 보스 프레임 하나가 스피드런 판도를 갈랐다</title>
+  <link rel="canonical" href="https://fx-torihiki.space/posts/field_note-005-19d2p5w.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>1.07 패치로 증발한 보스 프레임 하나가 스피드런 판도를 갈랐다</h1>
+    <article>
+      <p>데이터마이닝 툴 Yapped Rune Bear 2.14 버전에서 `c2130_00_00.partsbnd`를 열어보면 말이지. 거기 43번 오프셋에 남아있는 녀석이 첫 번째다.</p>
+<p>## 글린트스톤 드래곤 아둘라 ― 2페이즈 트리거가 사라졌다</p>
+<p>아둘라는 마누스 셀레스 대성당 앞에서 싸우는 게 정석 루트다. 그런데 실제 파일 안에는 두 번째 페이즈가 존재한다. 체력 50% 이하에서 윙 스매시 후 백스텝 브레스를 뿜는 패턴인데, `adula_phase2_wing_slam.tae`라는 애니메이션 컨테이너가 멀쩡히 남아 있다.</p>
+<p>이 패턴이 컷된 건 그냥 난이도 때문이 아니다. 1.04 이전까지 아둘라 아레나에는 보이지 않는 충돌 박스가 네 군데 박혀 있었다. 이걸 이용한 스킵이 퍼지면서 프롬이 패치를 때려박았고, 그 과정에서 2페이즈 트리거 스크립트가 함께 꼬였다. `adula_phase_transition.lua`를 들여다보면 `if player_damage > 0.5 then` 줄이 통째로 주석 처리되어 있다. 누가 봐도 급하게 덮어쓴 흔적이다.</p>
+<p>## “꿈의 주인” 미켈라의 그림자 ― 프레임 하나로 무효화된 전투</p>
+<p>이건 진짜 소름이다. `miquella_shadow_boss.param` 파일에 보면 패링 타이밍이 `startup_frame: 7`로 세팅되어 있다. 소울 시리즈 통틀어서 가장 빠른 패리 윈도우가 6프레임인 걸 감안하면, 이 보스는 설계 단계부터 ‘가드 카운터로만 잡게’ 만든 놈이다.</p>
+<p>문제는 `parry_window_end` 값이 `-1`로 하드코딩되어 있다는 거. 파라미터 설계자가 실수로 마이너스를 찍었거나, 아니면 의도적으로 “절대 패리 불가”를 만들려다가 디버그 단계에서 드롭한 거다.</p>
+<p>패턴은 총 3단계로 나뉘어 있다. 1단계는 일반적인 인간형 보스 AI, 2단계는 말레니아의 워터폴 댄스 모션셋을 공유한다. 여기까진 좋아. 문제는 3단계 `shadow_miquella_phase3_sleep_cloud`라는 이펙트 트리거인데, 이게 발동되면 플레이어 입력이 2.4초간 무시된다. 그런데 이 슬립 클라우드가 보스 자신에게도 적용되도록 설계되어 있었다. 즉, 보스가 스킬 쓰고 자폭하는 구조였다. 이걸 QA에서 발견하고 그냥 통째로 잘라버린 거다.</p>
+<p>## 잊혀진 전쟁기계 “벨룸의 용광로” ― 컷신 한 편 때문에 사라진 보스</p>
+<p>이름부터가 압권인데 `velum_forge_beast`다. 거대한 바퀴 형태의 골렘 보스로, 내부에 용암이 들어찬 가마솥을 등에 지고 있다. 공격 패턴은 롤링 차지랑 용암 분출 두 가지. 그런데 이 보스가 등장해야 했던 맵이 따로 있다. `m15_02`라는 이름의 미사용 지하 던전인데, 지금의 겔미어 화산관 아래쪽에 배치될 예정이었다.</p>
+<p>컷된 이유가 좀 어처구니가 없다. 보스가 쓰러질 때 재생되는 `forge_collapse.컷신` 파일이 존재하는데, 이게 1.03 패치에서 추가된 레이트레이싱 광원 연산과 충돌을 일으켰다. 특정 각도에서 보스가 죽으면 화면 전체가 하얗게 날아가는 화이트 블룸 버그가 발생했고, 프롬은 이걸 고치지 않고 던전 채로 삭제했다. `vite_02`의 맵 데이터는 아직 게임 내부에 존재한다. noclip으로 들어가면 보스 아레나의 콜리전 메시까지 멀쩡하게 남아 있다.</p>
+<p>## 진짜 문제는 이게 끝이 아니라는 거</p>
+<p>지금도 패치가 올라올 때마다 `regulation.bin`이 조용히 바뀐다. 1.</p>
+<p><a href="https://namanavi.com/" target="_blank" rel="noopener noreferrer">마케팅 자동화 에이전트 라이선스 서버</a></p>
+    </article>
+  </main>
+</body>
+</html>
