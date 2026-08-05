@@ -2,4 +2,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://fx-torihiki.space/sitemap.xml
+Sitemap: https://fx-torihiki.space/sitemap-pages.xml
 Sitemap: https://fx-torihiki.space/sitemap-index.xml
