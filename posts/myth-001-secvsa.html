@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>프레임 하나 때문에 6만 명이 뒤집어쓴 다크소울 프리레_PATCH_다</title>
-  <link rel="canonical" href="https://fx-torihiki.space/posts/myth-001-secvsa.html">
-  <style>
-    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
-    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
-    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
-    p { margin: 0 0 1em; }
-    a { color: #3182ce; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>프레임 하나 때문에 6만 명이 뒤집어쓴 다크소울 프리레_PATCH_다</title>
+ <link rel="canonical" href="https://fx-torihiki.space/posts/myth-001-secvsa.html">
+ <style>
+ body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+ h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+ h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+ h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+ p { margin: 0 0 1em; }
+ a { color: #3182ce; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+ </style>
   <meta property="og:url" content="https://fx-torihiki.space/posts/myth-001-secvsa.html">
   <meta property="og:title" content="프레임 하나 때문에 6만 명이 뒤집어쓴 다크소울 프리레_PATCH_다">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
-  <header>
-    <a href="../index.html">← 목록으로 돌아가기</a>
-  </header>
-  <main>
-    <h1>프레임 하나 때문에 6만 명이 뒤집어쓴 다크소울 프리레_PATCH_다</h1>
-    <article>
-      <p>2011년 프레스 데모에서 유출된 엘리트 가드 배치 위치가 1.0 정발판과 정확히 몇 타일 어긋나 있는지 아는 사람이 이 바닥에 몇 명이나 될까. 나는 그걸 캡처보드로 녹화해가며 프레임 단위로 대조한 적이 있다. 대체 왜 그랬냐고? 스피드런이었다.</p>
+ <header>
+ <a href="./index.html">← 목록으로 돌아가기</a>
+ </header>
+ <main>
+ <h1>프레임 하나 때문에 6만 명이 뒤집어쓴 다크소울 프리레_PATCH_다</h1>
+ <article>
+ <p>2011년 프레스 데모에서 유출된 엘리트 가드 배치 위치가 1.0 정발판과 정확히 몇 타일 어긋나 있는지 아는 사람이 이 바닥에 몇 명이나 될까. 나는 그걸 캡처보드로 녹화해가며 프레임 단위로 대조한 적이 있다. 대체 왜 그랬냐고? 스피드런이었다.</p>
 <h2>데모와 정발판 사이의 적 배치 갭</h2>
 <p>소위 '프레스 데모'로 불리는 2011년 6월경 유통된 빌드에서, 언데드 버그 북쪽 계단에 스켈레나이트가 두 마리 배치되어 있었다. 정발 1.0에는 그 자리에 한 마리만존재한다. 이 한 마리 차이가 왜 중요하냐면, 초기 진입 루트에서 탈출 글리치의 시작 프레임이 완전히 달라지기 때문이다. 데모 기준으로는 왼쪽 벽 밀치기 후 3프레임 내에 점프 캔슬이 가능했지만, 정발판은 적 AI의 어그로 범위가 0.3유닛 확장되어 같은 입력으로는 스켈레나이트에 걸린다. 스피드러너 커뮤니티에서 이걸 'Skele-block'이라고 불렀다.</p>
 <h2>패치가 지운 글리치의 조건</h2>
@@ -38,7 +38,7 @@
 <p>다만 분명히 짚고 넘어가자. 패치마다 달라지는 건 글리치 하나가 아니다. AI 패턴, 드롭 확률, 콜리전 바운더리가 전부 유기적으로 연결되어 있다. A를 고치면 B가 깨지고, B를 고치면 C가 생긴다. 이 연쇄를 이해하지 못하면 '어 뭐지 이거 안 되네' 하고 멈추게 된다.</p>
 <p>실행 전에 세 가지만 확인해보라. 현재 핸들링하는 빌드 버전이 정확히 몇 번인지, 그 빌드에서 목표 글리치의 프레임 윈도우가 몇 프레임인지, 그리고 그 프레임 윈도우 안에 어그로 범위 밖의 적이 존재하는지. 이 셋 중 하나라도 모호하면 그 라우트는 버려야 한다.</p>
 <p><a href="https://pbn-builder.xyz/" target="_blank" rel="noopener noreferrer">PBN 빌더 자동 백링크 프로그램 분양</a></p>
-    </article>
-  </main>
+ </article>
+ </main>
 </body>
 </html>
