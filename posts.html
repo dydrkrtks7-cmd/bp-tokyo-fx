@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/3) · tokyo-fx</title>
+  <meta name="description" content="tokyo-fx에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://fx-torihiki.space/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+:root{--primary:#4a9eff;--accent:#7bc8ff;--bg:#0a0f1e;--bg2:#0f1628;--bg3:#141d35;--text:#d0d8f0;--muted:#6070a0;--border:#1e2840;--radius:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
+header{position:sticky;top:0;z-index:100;background:rgba(10,15,30,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%}
+.hi{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1200px;margin:0 auto}
+.logo{font-size:1.15rem;font-weight:800;color:var(--accent)}
+.logo small{color:var(--muted);font-weight:400;font-size:.78rem;margin-left:6px}
+nav a{font-size:.86rem;color:var(--muted);margin-left:20px;transition:.2s}
+nav a:hover{color:var(--accent)}
+.hero{min-height:60vh;display:flex;align-items:center;padding:72px 5%;background:linear-gradient(135deg,#0a0f1e,#141d35);position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(74,158,255,.08),transparent 70%)}
+.hc{max-width:800px;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(74,158,255,.12);border:1px solid rgba(74,158,255,.25);border-radius:50px;padding:4px 12px;font-size:.78rem;color:var(--primary);margin-bottom:20px}
+.hc h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.2;letter-spacing:-.5px;margin-bottom:14px}
+.hc h1 em{color:var(--accent);font-style:normal}
+.hsub{font-size:.95rem;color:var(--muted);margin-bottom:28px;line-height:1.8}
+section{padding:64px 5%}
+.si{max-width:1200px;margin:0 auto}
+.sh{text-align:center;margin-bottom:44px}
+.stag{display:inline-block;background:rgba(74,158,255,.1);color:var(--primary);font-size:.74rem;font-weight:700;padding:3px 10px;border-radius:50px;letter-spacing:1px;margin-bottom:10px}
+.sh h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:900}
+.sh p{color:var(--muted);margin-top:8px;font-size:.9rem}
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.post{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:.3s;position:relative;overflow:hidden}
+.post::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}
+.post:hover{border-color:var(--primary);transform:translateY(-3px)}
+.ptag{font-size:.76rem;color:var(--primary);font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.post h3{font-size:1rem;font-weight:800;margin-bottom:10px;line-height:1.4}
+.post h3 a{color:var(--text)}
+.post h3 a:hover{color:var(--accent)}
+.post p{font-size:.86rem;color:var(--muted);line-height:1.7}
+.pdate{font-size:.78rem;color:var(--muted);margin-top:12px}
+.article{max-width:800px;margin:0 auto;padding:64px 5%}
+.article h1{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;margin-bottom:20px;line-height:1.3}
+.article .meta{color:var(--muted);font-size:.85rem;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.article h2{font-size:1.3rem;font-weight:800;margin:32px 0 14px;color:var(--accent)}
+.article h3{font-size:1.1rem;font-weight:700;margin:24px 0 10px}
+.article p{font-size:.95rem;color:var(--text);line-height:1.9;margin-bottom:18px}
+.article ul{padding-left:1.5em;margin-bottom:18px}
+.article li{margin-bottom:8px;font-size:.93rem;color:var(--text)}
+.article blockquote{border-left:3px solid var(--primary);padding:12px 20px;background:var(--bg2);border-radius:0 8px 8px 0;margin:24px 0;color:var(--muted);font-style:italic}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:32px 5% 20px;text-align:center}
+.fbot{font-size:.8rem;color:var(--muted)}
+@media(max-width:768px){nav{display:none}}
+</style>
+  <meta property="og:title" content="글 목록 (1/3) · tokyo-fx">
+  <meta property="og:description" content="tokyo-fx에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://fx-torihiki.space/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header><div class="hi"><div class="logo">틈새 키워드</div><nav><a href="index.html">홈</a></nav></div></header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 58개 · 1/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-1nq9tpl.html">내 가게 망한 이유를 원가 분석 돌려봤다. 아니다, 너희가 아는 그 숫자 장난 말고.</a>
+        <p class="post-item__summary">“야, 너 이번 달 매출 3천 찍었다.” 그 말 듣고 희열이 차올랐다. 한 달 뒤, 카드값 빠질 통장을 보고 그대로 얼어붙었다. 이게 현실이다. 매출이라는 숫자에 취해 있으면 진짜 재무제표 한 줄에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-1o07k.html">파리 덩크 스티치 게이트, 내가 공장에서 도망치던 날 본 것</a>
+        <p class="post-item__summary">&quot;그래서 2003이랑 2021이랑 박스 종이가 왜 다른데?&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-5btecm.html">월 3천 찍어도 적자라는 말, 전기세부터 세어보면 이유가 나옵니다</a>
+        <p class="post-item__summary">2021년 가을, 나는 월 매출 3천2백을 찍고 있었다. 업계에서는 &quot; 잘 된 케이스&quot;라고 했다. 6개월 뒤 문을 닫을 줄은 그때 당시 아무도 몰랐다. 나 포함.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-sfp8ut.html">파이트클럽 타일러 더든 서브리미널 프레임 6회 관찰 기록과 네이버 검색 트랩</a>
+        <p class="post-item__summary">파이트클럽 개봉 25년이 지난 지금까지, 프레임 단위 분석 게시물은 포럼 검색량 상위 12% 안에 든다. 나는 처음 이 숫자를 봤을 때 솔직히 어이가 없었다. 타일러 더든이 공식적으로 등장하기 전,</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-002-n2zqtk.html">틈새 키워드 선정의 기술, 트래픽 차익의 본질</a>
+        <p class="post-item__summary">대부분의 사람이 트래픽 차익을 노린다며 뛰어들지만, 정작 자신이 무엇을 파고 있는지조차 모르는 경우가 태반이다. 단순히 검색량이 많은 키워드를 골라 광고를 붙이는 방식은 이미 십 년 전에 죽었다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-1yhm9fe.html">구글 틈새 키워드와 외환 거래를 결합한 트래픽 차익 투자 전략</a>
+        <p class="post-item__summary">트래픽 차익 투자란 특정 정보를 찾는 사용자의 유입을 유도하여 발생하는 가치를 수익으로 전환하는 일련의 과정을 의미합니다. 구글과 같은 검색 엔진에서 경쟁이 치열하지 않은 틈새 키워드를 발굴하는 것</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-003-3h85eg.html">2011년 8월 북미 데모만 알고 계십니까</a>
+        <p class="post-item__summary">2011년 8월 24일, 플스3용 다크소울 프리뷰 데모가 북미에 풀렸다. 나는 그 시점에 Firelink Shrine의 레이아웃이 정식과 완전히 다른 걸 보고 소름 돋았다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-18zeqwf.html">편집실에서 본 블레이드 러너: 스콧이 끝내 버린 3개 신의 원본과 그 진짜 이유</a>
+        <p class="post-item__summary">1982년 워너브라더스 편집실. 테리 롤링스가 스틴벡 평면 편집기 앞에서 고개를 젓던 장면으로 시작한다. 그날 아침 리들리 스콧은 세 장면을 완전히 들어냈다. 롤링스는 이걸 두고 &quot;편집증적 결정&quot;이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-fxby9a.html">구글 틈새 키워드 트래픽 외환 거래 전략</a>
+        <p class="post-item__summary">2023년 9월, 특정 외환 관련 키워드가 구글 트렌드에서 72시간 만에 검색량 340% 상승을 기록했다. 그런데 정작 그 키워드로 수익을 낸 트레이더는 극소수였다. 이유는 간단하다. 대부분이 이미</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-gwoex4.html">파일 해시와 0.1% 시그널, 다크소울 1 데모 버전에서 찾은 구글 틈새 키워드 전략</a>
+        <p class="post-item__summary">데이터 마이너들이 흔히 찾는 것은 표면적인 스펙보다 파일 내부의 이력서다. 2011 년 3 월 PS3 용 데모 버전인 demo_ps3_v1.02 을 디렉토리 레벨에서 분석할 때, 실행 파일 경로에 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-004-h8k5sx.html">검증 안 된 코드명을 구글 자동완성에 밀어 넣으면 벌어지는 일</a>
+        <p class="post-item__summary">1972년 8월, 뉴스York Times 기자가 상원 보건소위원회 청문회 자료를 뒤적이다 빠뜨린 페이지가 있었다. 34페이지. 번호 매기기에서만 통째로 건너뛴 그 자리에는 서브프로젝트 기록 3건이 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-005-19d2p5w.html">1.07 패치로 증발한 보스 프레임 하나가 스피드런 판도를 갈랐다</a>
+        <p class="post-item__summary">데이터마이닝 툴 Yapped Rune Bear 2.14 버전에서 `c2130_00_00.partsbnd`를 열어보면 말이지. 거기 43번 오프셋에 남아있는 녀석이 첫 번째다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-001-btovkq.html">나는 47개 외환 관련 키워드의 클릭당 비용을 3년간 추적했는데, 대부분의 트래픽 차익 전략이 실프하는 지점이 딱 하나 있다</a>
+        <p class="post-item__summary">&quot;볼륨 높은 키워드가 돈이 된다고? 그건 그냥 키워드 플래너만 믿는 거지.&quot; 어느 트레이딩 커뮤니티에서 본 댓글이었다. 무심한 듯했는데 꽤 오래 기억에 남았다. 왜냐면 데이터가 그 반대를 보여주고 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-169ta9o.html">패치가 삼키기 전, 프레임 하나로 증명된 보스 AI 3종의 실제 구조</a>
+        <p class="post-item__summary">컷 콘텐츠라 하면 보통 '미완성이라 뺐다'고 설명하곤 한다. 그런데 세 보스의 바이너리를 뜯어보면?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-g9l4lm.html">테라포밍 마스 비너스 초판본 감정가가 폭락하는 이유와 구글 틈새 키워드 트래픽 외환 거래 전략의 소름 돋는 공통점</a>
+        <p class="post-item__summary">박스 뒷면 우측 하단에 인쇄된 '2017 FryxGames' 로고 옆의 미세한 폰트 번짐 현상 하나가 중고 매입가를 3만 원이나 깎아내립니다. 비너스 넥스트(Venus Next) 확장의 1쇄본을 들</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-gwoex4.html">Final Cut 버전 오류로 인해 사라진 그 원색의 가치를 재평가하다</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-iaf3cz.html">비너스 확장 2인 플레이에서 공식 FAQ도 외면한 코너케이스 세 개, 직접 겪고 나서야 알게 된 것들</a>
+        <p class="post-item__summary">&quot;저거 규칙서 어디까지 읽었어?&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-waop3x.html">구글 틈새 키워드로 구축한 트래픽을 외환 거래 시장에 어떻게 연결할 것인가</a>
+        <p class="post-item__summary">대부분의 사람이 트래픽을 모으는 것 자체에만 매몰되어 시간을 낭비한다. 블로그에 방문자가 들어오면 애드센스 수익 몇 푼에 만족하는 것이 수준의 한계다. 내 관점은 다르다. 트래픽은 그 자체로 금융 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-003-zxdop7.html">버려진 보스 3마리 데이터에서 발견한 진짜는 &amp;#39;승부처&amp;#39;가 아니었다</a>
+        <p class="post-item__summary">데이터마이닝 커뮤니티에서 발견된 미사용 보스 패턴을 보고 &quot;원래 이런 게 있었습니다&quot;라고 감탄하는 글, 얼마나 봤나. 그런데 그걸로 끝인 경우가 대다수인데, 정작 묻혀버린 질문은 이거다. 해당 패턴</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-1faod3w.html">내가 단골 가게에서 몰래 계산해본 룸 업소의 가격별 원가, 이걸 알고도 가겠습니까</a>
+        <p class="post-item__summary">룸 단위로 파는 업소, 예를 들어 노래방이나 룸술집 같은 곳. 여기서 한 시간 2만원 받는 방이랑 5만원 받는 방이랑, 대체 원가 차이가 얼마나 될 거라 생각하시나요? 대부분 사람은 &quot;가격 차이만큼</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <a class="pager__link" href="posts-3.html">3</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>

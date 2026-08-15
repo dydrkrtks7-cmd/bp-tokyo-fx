@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/3) · tokyo-fx</title>
+  <meta name="description" content="tokyo-fx에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://fx-torihiki.space/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+:root{--primary:#4a9eff;--accent:#7bc8ff;--bg:#0a0f1e;--bg2:#0f1628;--bg3:#141d35;--text:#d0d8f0;--muted:#6070a0;--border:#1e2840;--radius:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
+header{position:sticky;top:0;z-index:100;background:rgba(10,15,30,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%}
+.hi{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1200px;margin:0 auto}
+.logo{font-size:1.15rem;font-weight:800;color:var(--accent)}
+.logo small{color:var(--muted);font-weight:400;font-size:.78rem;margin-left:6px}
+nav a{font-size:.86rem;color:var(--muted);margin-left:20px;transition:.2s}
+nav a:hover{color:var(--accent)}
+.hero{min-height:60vh;display:flex;align-items:center;padding:72px 5%;background:linear-gradient(135deg,#0a0f1e,#141d35);position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(74,158,255,.08),transparent 70%)}
+.hc{max-width:800px;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(74,158,255,.12);border:1px solid rgba(74,158,255,.25);border-radius:50px;padding:4px 12px;font-size:.78rem;color:var(--primary);margin-bottom:20px}
+.hc h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.2;letter-spacing:-.5px;margin-bottom:14px}
+.hc h1 em{color:var(--accent);font-style:normal}
+.hsub{font-size:.95rem;color:var(--muted);margin-bottom:28px;line-height:1.8}
+section{padding:64px 5%}
+.si{max-width:1200px;margin:0 auto}
+.sh{text-align:center;margin-bottom:44px}
+.stag{display:inline-block;background:rgba(74,158,255,.1);color:var(--primary);font-size:.74rem;font-weight:700;padding:3px 10px;border-radius:50px;letter-spacing:1px;margin-bottom:10px}
+.sh h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:900}
+.sh p{color:var(--muted);margin-top:8px;font-size:.9rem}
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.post{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:.3s;position:relative;overflow:hidden}
+.post::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}
+.post:hover{border-color:var(--primary);transform:translateY(-3px)}
+.ptag{font-size:.76rem;color:var(--primary);font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.post h3{font-size:1rem;font-weight:800;margin-bottom:10px;line-height:1.4}
+.post h3 a{color:var(--text)}
+.post h3 a:hover{color:var(--accent)}
+.post p{font-size:.86rem;color:var(--muted);line-height:1.7}
+.pdate{font-size:.78rem;color:var(--muted);margin-top:12px}
+.article{max-width:800px;margin:0 auto;padding:64px 5%}
+.article h1{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;margin-bottom:20px;line-height:1.3}
+.article .meta{color:var(--muted);font-size:.85rem;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.article h2{font-size:1.3rem;font-weight:800;margin:32px 0 14px;color:var(--accent)}
+.article h3{font-size:1.1rem;font-weight:700;margin:24px 0 10px}
+.article p{font-size:.95rem;color:var(--text);line-height:1.9;margin-bottom:18px}
+.article ul{padding-left:1.5em;margin-bottom:18px}
+.article li{margin-bottom:8px;font-size:.93rem;color:var(--text)}
+.article blockquote{border-left:3px solid var(--primary);padding:12px 20px;background:var(--bg2);border-radius:0 8px 8px 0;margin:24px 0;color:var(--muted);font-style:italic}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:32px 5% 20px;text-align:center}
+.fbot{font-size:.8rem;color:var(--muted)}
+@media(max-width:768px){nav{display:none}}
+</style>
+  <meta property="og:title" content="글 목록 (2/3) · tokyo-fx">
+  <meta property="og:description" content="tokyo-fx에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://fx-torihiki.space/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header><div class="hi"><div class="logo">틈새 키워드</div><nav><a href="index.html">홈</a></nav></div></header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 58개 · 2/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-005-1v509im.html">구글 틈새 검색어로 외환 리드 캐는 법, 다들 프랙탈 오디세이만 보더라</a>
+        <p class="post-item__summary">2007년 12월 18일, 워너 브라더스의 한 편집실. 테리 롤링스가 Avid Media Composer 타임라인에서 프레임 1342를 째려보고 있었다. 모니터엔 유니콘이 달리고 있고, 그는 이 1</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-005-1viqtip.html">젤 카야노 14 OG 아이보리 2023 리스탁, 인솔 로고 하나 때문에 내 리셀 마진이 날아간 이야기</a>
+        <p class="post-item__summary">작년 겨울, 내 작업실 바닥에 놓인 젤 카야노 14 OG 아이보리 상자가 있었다. 박스 측면 테이프 자국 하나. 그게 전부인데 리셀 시세표에서 38%가 증발했다. 나는 커스텀 작가니까 리셀은 안 하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-005-elgg4f.html">구글 틈새 키워드로 만드는 트래픽 차익과 외환 거래의 기술적 결합</a>
+        <p class="post-item__summary">대부분의 사람이 트래픽 차익 투자를 한다며 덤빌 때, 정작 수익을 내는 구조는 전혀 이해하지 못하고 있다. 단순히 구글 검색 결과 상단에 글을 노출하면 돈이 벌릴 것이라는 망상은 버려라. 핵심은 검</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-6zyiux.html">스노든 슬라이드 #7: 빠진 조각이 지닌 진짜 &amp;#39;가치&amp;#39;를 아는가?</a>
+        <p class="post-item__summary">2013년 6월, 온 세상이 난리였던 그날을 기억한다. 언론은 연일 난</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-1070hqo.html">월매출 3천 찍고 6개월 만에 접은 룸 service의 원가, 니가 모르는 숨은 30%</a>
+        <p class="post-item__summary">그OTO 키오스크 설치비 470만원. 이게 나를 6개월 만에 접게 만든 첫 번째 경고 신호였다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-8gigu9.html">구글 검색 기반의 트래픽 차익 투자와 외환 거래 전략의 상관관계</a>
+        <p class="post-item__summary">트래픽 차익 투자는 검색 엔진에서 파생되는 유입량을 수익화하는 구조를 핵심으로 삼습니다. 특히 구글의 틈새 키워드를 활용해 특정 정보에 목마른 이용자를 확보하고, 이를 외환 거래 관련 플랫폼이나 금</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-ig6pt4.html">당신이 놓친 1mm 차이, 300만원 손실을 부르는 아식스 젤 카야노 14 OG 아이보리 인솔 로고 변천</a>
+        <p class="post-item__summary">많은 컬렉터는 “인솔 로고가 바뀐 건 사소한 일”이라 생각한다. 실제로 2023년 리스탁에서 바뀐 부분은 눈에 띄지 않지만, 중고 리셀 시장에서 1mm라도 오인하면 바로 300만원을 날릴 수 있다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-002-u49tyl.html">2003 파리 덩크 스티치 한 땀 때문에 300만원이 깨진다, 네가 봐야 할 건 박스가 아니라 실밥이다</a>
+        <p class="post-item__summary">2003년 오리지널과 2021년 레트로, 겉보기엔 같은 신발이다. 그런데 왜 중고 시장에서 2003년판은 300만원이 훌쩍 넘고 2021년판은 그 절반에도 못 미칠까? 단순히 '올드함' 때문이 아니</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-003-1q7fhsl.html">검색 트래픽만 믿고 달려들면 쓸림</a>
+        <p class="post-item__summary">2023년 3월, 아식스가 젤 카야노 14 OG 아이보리를 리스탁했다. 한정판 시장은 이 사실 하나에 들썩였는데, 정작 잡음이 난 곳은 신발 안쪽이었다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-1m7dlgw.html">을지로에서 외환 트레이딩 전략을 검증할 때, 먼저 던져야 할 질문 두 개</a>
+        <p class="post-item__summary">서울 중구 을지로 인근에서 마케팅 자동화를 고민하는 외환 관련 업체들이 공통적으로 하는 실수가 있다. 블로그 SEO 기반 전략과 구글 애즈 기반 전략 중 하나를 선택할 때, 양쪽 다 &quot;효과가 있다&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-004-1mrzq5w.html">외환 거래 트래픽 차익의 함정과 수익 구조의 재설계</a>
+        <p class="post-item__summary">대부분의 사람이 트래픽 차익 투자를 운운하며 계좌를 녹이는 이유는 간단하다. 그들은 시장의 파동을 읽는 게 아니라, 검색 엔진이 던져주는 부스러기를 쫓는 데 혈안이 되어 있기 때문이다. 구글에서 틈</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-1tcqmco.html">구글 틈새 키워드와 트래픽 차익 투자를 활용한 외환 거래 전략</a>
+        <p class="post-item__summary">트래픽 차익 투자란 인터넷상의 특정 공간에서 발생하는 방문자 흐름을 자산으로 간주하고 이를 수익화하는 기법을 의미합니다. 구글 검색 엔진에서 경쟁이 낮은 틈새 키워드를 발굴하여 유입을 만들어내고, </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-gwoex4.html">글룸헤이븐 1 판과 2 판 클래스 카드의 숨겨진 수학적 증명과 그 외한 거래 전략</a>
+        <p class="post-item__summary">너무 당연하게도 1 판에서 2 판으로 넘어올 때 클래스 카드의 수치적 변화는 단순하지 않아. 예를 들어 Artificer의 경우 공격력 보다는 이동력이 우선순위로 재배치된 거야. 구체적으로 말하면,</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-hzvthr.html">구글 틈새 키워드 발굴을 통한 트래픽 차익 투자 전략</a>
+        <p class="post-item__summary">구글 검색 엔진에서 특정 틈새 키워드를 선정하여 트래픽을 유도하고 이를 외환 거래 전략과 연결하는 것은 효율적인 투자 방식입니다. 검색량이 적지만 구매 전환율이 높은 키워드를 찾는 것이 이 과정의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-005-tvx8q7.html">글룸헤이븐 1판과 2판의 클래스 카드 비교: 중고 매입업자의 관점에서</a>
+        <p class="post-item__summary">&quot;글룸헤이븐 1판과 2판의 차이는 그저 숫자가 다를 뿐이냐, 정말로?&quot;라는 질문을 들었을 때, 중고 매입업자로서의 내 경험을 되돌아보게 된다. 글룸헤이븐은 보드게임의 세계에서인기를 끌고 있지만, 특</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-r85znx.html">젤 카야노 14 인솔 로고 하나로 300을 날린 어느 리셀러의 오답노트</a>
+        <p class="post-item__summary">2023년 11월, 강남의 한 스니커즈 커뮤니티 정모 자리에서 벌어진 일입니다. 2008년 원형을 복각한 아식스 젤 카야노 14 OG 아이보리 컬러웨이가 다시 시장에 풀렸을 때, 누군가 야심 차게 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-001-secvsa.html">프레임 하나 때문에 6만 명이 뒤집어쓴 다크소울 프리레_PATCH_다</a>
+        <p class="post-item__summary">2011년 프레스 데모에서 유출된 엘리트 가드 배치 위치가 1.0 정발판과 정확히 몇 타일 어긋나 있는지 아는 사람이 이 바닥에 몇 명이나 될까. 나는 그걸 캡처보드로 녹화해가며 프레임 단위로 대조</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-12g8jtw.html">젤 카야노 14 OG의 리스탁과 달라진 인솔 로고 프린트: 2023년 한정판 스니커즈 마이너 디테일</a>
+        <p class="post-item__summary">2023년, 아식스에서 젤 카야노 14 OG를 리스탁하였습니다. 이 리스탁에는 한정판 스니커즈 마이너 디테일 중 하나로, 인솔 로고 프린트가 달라졌습니다. 이변화는 많은 스니커즈 애호가들에게 관심을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-1i8v78u.html">트래픽 차익을 노리는 아마추어들의 가장 큰 착각</a>
+        <p class="post-item__summary">검색 엔진 최적화라는 이름으로 수만 개의 페이지를 긁어모으면 돈이 복사될 것이라 믿는 머저리들이 있다. 구글이 틈새 키워드를 잡아내는 알고리즘을 개선하고 있다는 사실은 안중에도 없나 보다. 본질을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-4t4a6x.html">공식 FAQ가 침묵한 코너케이스 3가지, 테라포밍 마스 비너스 2인 밸런스 붕괴 증거</a>
+        <p class="post-item__summary">2019년 11월, 나는 동네 보드게임 카페에서 테라포밍 마스 비너스 확장 포함 2인 세션을 진행했다. 상대방은 초기 턴에 Venus Siding(비너스 외교)을 끌어오고, 두 번째 턴에 Float</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+      <a class="pager__link" href="posts-3.html">3</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>

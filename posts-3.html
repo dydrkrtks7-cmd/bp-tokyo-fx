@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (3/3) · tokyo-fx</title>
+  <meta name="description" content="tokyo-fx에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://fx-torihiki.space/posts-3.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+:root{--primary:#4a9eff;--accent:#7bc8ff;--bg:#0a0f1e;--bg2:#0f1628;--bg3:#141d35;--text:#d0d8f0;--muted:#6070a0;--border:#1e2840;--radius:10px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--primary);text-decoration:none}a:hover{color:var(--accent)}
+header{position:sticky;top:0;z-index:100;background:rgba(10,15,30,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 5%}
+.hi{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1200px;margin:0 auto}
+.logo{font-size:1.15rem;font-weight:800;color:var(--accent)}
+.logo small{color:var(--muted);font-weight:400;font-size:.78rem;margin-left:6px}
+nav a{font-size:.86rem;color:var(--muted);margin-left:20px;transition:.2s}
+nav a:hover{color:var(--accent)}
+.hero{min-height:60vh;display:flex;align-items:center;padding:72px 5%;background:linear-gradient(135deg,#0a0f1e,#141d35);position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 50% 30%,rgba(74,158,255,.08),transparent 70%)}
+.hc{max-width:800px;position:relative;z-index:1}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(74,158,255,.12);border:1px solid rgba(74,158,255,.25);border-radius:50px;padding:4px 12px;font-size:.78rem;color:var(--primary);margin-bottom:20px}
+.hc h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;line-height:1.2;letter-spacing:-.5px;margin-bottom:14px}
+.hc h1 em{color:var(--accent);font-style:normal}
+.hsub{font-size:.95rem;color:var(--muted);margin-bottom:28px;line-height:1.8}
+section{padding:64px 5%}
+.si{max-width:1200px;margin:0 auto}
+.sh{text-align:center;margin-bottom:44px}
+.stag{display:inline-block;background:rgba(74,158,255,.1);color:var(--primary);font-size:.74rem;font-weight:700;padding:3px 10px;border-radius:50px;letter-spacing:1px;margin-bottom:10px}
+.sh h2{font-size:clamp(1.4rem,2.8vw,2rem);font-weight:900}
+.sh p{color:var(--muted);margin-top:8px;font-size:.9rem}
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.post{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:.3s;position:relative;overflow:hidden}
+.post::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary),var(--accent))}
+.post:hover{border-color:var(--primary);transform:translateY(-3px)}
+.ptag{font-size:.76rem;color:var(--primary);font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px}
+.post h3{font-size:1rem;font-weight:800;margin-bottom:10px;line-height:1.4}
+.post h3 a{color:var(--text)}
+.post h3 a:hover{color:var(--accent)}
+.post p{font-size:.86rem;color:var(--muted);line-height:1.7}
+.pdate{font-size:.78rem;color:var(--muted);margin-top:12px}
+.article{max-width:800px;margin:0 auto;padding:64px 5%}
+.article h1{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;margin-bottom:20px;line-height:1.3}
+.article .meta{color:var(--muted);font-size:.85rem;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid var(--border)}
+.article h2{font-size:1.3rem;font-weight:800;margin:32px 0 14px;color:var(--accent)}
+.article h3{font-size:1.1rem;font-weight:700;margin:24px 0 10px}
+.article p{font-size:.95rem;color:var(--text);line-height:1.9;margin-bottom:18px}
+.article ul{padding-left:1.5em;margin-bottom:18px}
+.article li{margin-bottom:8px;font-size:.93rem;color:var(--text)}
+.article blockquote{border-left:3px solid var(--primary);padding:12px 20px;background:var(--bg2);border-radius:0 8px 8px 0;margin:24px 0;color:var(--muted);font-style:italic}
+footer{background:var(--bg2);border-top:1px solid var(--border);padding:32px 5% 20px;text-align:center}
+.fbot{font-size:.8rem;color:var(--muted)}
+@media(max-width:768px){nav{display:none}}
+</style>
+  <meta property="og:title" content="글 목록 (3/3) · tokyo-fx">
+  <meta property="og:description" content="tokyo-fx에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://fx-torihiki.space/posts-3.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header><div class="hi"><div class="logo">틈새 키워드</div><nav><a href="index.html">홈</a></nav></div></header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 58개 · 3/3 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-002-gwoex4.html">홍대 상권은 외환 거래와 같다? 단골 손님이 본 원가 폭로기</a>
+        <p class="post-item__summary">cafe, hongdae, korea, night, neon_light, closed_sign, 2023, street_view, urban_decay, coffee_beans, steam, emp</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-15gmjh1.html">2023 카야노 14 리스탁, 인솔 프린트 하나에 내부고발 냄새가 난다고?</a>
+        <p class="post-item__summary">인솔 프린트 하나가 이렇게 사람을 미치게 만들 줄은 몰랐다. 2023년 4분기, 아식스가 젤 카야노 14 OG 아이보리 컬러웨이를 추가 리스탁했을 때의 일이다. 대부분은 그냥 지나쳤다. 박스도 같고</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-004-gn2g45.html">스니커즈 감정사가 말하는 진품 판독의 잔인한 디테일</a>
+        <p class="post-item__summary">2003년판과 2021년 레트로판 SB Dunk Low Paris를 나란히 놓으면, 보통 사람 눈엔 거의 똑같아 보인다. 그런데 스니커즈 감정 업계에선 이 두 스니커를 구별하는 방법이 존재한다. 나</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-004-hnua98.html">엘든링 데이터마이닝, 컷된 보스들 패턴이 말해주는 진짜 이유</a>
+        <p class="post-item__summary">다들 데이터마이닝으로 찾은 미사용 보스 보면 “와, 이걸 왜 짤랐냐” “DLC로 나오겠지” 이딴 소리나 하더라. 진짜 인디 개발자 입장에서 보면, 이런 반응 자체가 기획을 모르는 소리다. 스팀에 올</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-004-kpobxf.html">니치 키워드 &amp;#39;검색 폭증&amp;#39;이 외환 매매 신호가 되는 착각: 72시간 법칙과 94%의 함정</a>
+        <p class="post-item__summary">Does a sudden spike in Google Trends for a forex-related keyword actually predict a tradeable move? 그 질문에 매달린 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-005-10vayy3.html">유니콘 종이접기 하나가 25년간 블레이드 러너를 지배한 과정, 정확히 말하면</a>
+        <p class="post-item__summary">1982년 6월, 캘리포니아 버뱅크의 한 소품 창고에서 나는 종이 몇 장을 손에 쥐었다. 릭 데커드가 꿈에서 보는 유니콘을 접어야 했다. 문제는 예산이었다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-1h91l0a.html">월매출 3천이면 장사 잘하는 거 아냐? 홍대 폐업 점주가 말하는 원가 구조의 함정</a>
+        <p class="post-item__summary">월매출 3천 찍으면 부럽지 않아요? 그런데 그중 2천이 나가는 구조가 홍대에 얼마나 많은지 아세요.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-8ri07y.html">94초의 유니콘 꿈: 1982년 잘린 장면들이 2007년에 전부를 뒤집었다</a>
+        <p class="post-item__summary">117분 versus 118분. 1982년 극장판과 2007년 파이널 컷의 실제 런타임 차이.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-gwoex4.html">구글 틈새 키워드로 트래픽 차익을 실현하는 외환 거래 전략</a>
+        <p class="post-item__summary">트래픽 차익 투자는 검색 엔진에서 발생하는 유입량을 활용하여 경제적 가치를 창출하는 체계적인 방식입니다. 특히 외환 거래와 같은 금융 분야는 클릭당 단가가 높고 수요가 꾸준하여 틈새 키워드를 발굴하</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-ixpvow.html">외환 거래에서 자동완성 키워드 하나가 계좌 잔고 바꾸는 과정</a>
+        <p class="post-item__summary">모두가 &quot;검색량 높은 키워드를 잡아라&quot;고 말한다. 틀렸다. 정확히는 반만 맞다. 구글 자동완성 드롭다운에 뜨는 키워드와 검색량 상위 키워드는 겹치는 비율이 38% 정도다. 나머지 62%는 완전히 다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-14kpo4h.html">다크소울 1편 데모 데이터마이닝: 미야자키가 칼질해버린 북부 수용소와 진짜 그리버스</a>
+        <p class="post-item__summary">게임 파일을 뜯던 새벽 3시, 디스코드 화면 공유로 친구랑 동시에 소리 지른 적 있다. &quot;이 맵 에셋 뭐야? 본편에 이거 없잖아.&quot;</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-003-1scrfla.html">구글 자동완성에 숨겨진 외환 트레이더들의 키워드 전쟁, 내가 관전한</a>
+        <p class="post-item__summary">어떤 외환 트레이더가 구글 검색창에 &quot;EUR/USD&quot;를 치면 자동완성에 뜨는 연관 검색어의 70% 이상이 수익과 직결된다는 사실, 알고 있었나?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-003-btrqop.html">구글 검색창이 던진 키워드 하나로 외환 트레이더의 시간을 갉아먹는 이유</a>
+        <p class="post-item__summary">2006년 9월 5일, 로스앤젤레스 컬버시티에 있는 한 편집실. 테리 롤링스가 Final Cut Pro 5.1 타임라인에서 3초짜리 클립 하나를 클릭한 순간, 모니터에 비친 건 완전히 노출이 날아간</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-003-d6kc8v.html">구글 틈새 키워드 트래픽 외환 거래 전략, 이거 모르면 뒤통수 맞습니다</a>
+        <p class="post-item__summary">2012년 겨울, 어떤 일본산 중고 게임 잡지 스캔본에서 본 한 장의 스크린샷이 내 인생을 망쳤다. 북부의 수용소 같기도 하고 버려진 수도원 같기도 한 그 지역의 적 배치가 지금 내가 아는 다크소울</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-003-vdq7mz.html">구글 검색 엔진의 사각지대를 이용한 트래픽 차익 투자 수익률 극대화 전략</a>
+        <p class="post-item__summary">대부분의 블로거는 검색량이 많은 대형 키워드 뒤를 쫓느라 바쁘다. 남들이 다 보는 정보로 트래픽을 모으겠다는 발상 자체가 효율을 포기하겠다는 선언과 다름없다. 구글 틈새 키워드를 공략하는 핵심은 검</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-004-ge4k53.html">월 3천 찍고도 무너지는 매장, 원가 장부 뒤집어 보면 답 나온다</a>
+        <p class="post-item__summary">장부상으로 흑자 찍는 달이 있었는데, 그 달이 오히려 내겐 가장 치명적이었다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-005-1f012gd.html">구글 자동완성 키워드 1,200개를 싹 긁었더니 외환 시장만의 비밀 공식이 보이기 시작했다</a>
+        <p class="post-item__summary">A라는 트레이더는 매달 구글 트렌드에서 급등한 '비밀 통화 코드' 키워드 5개를 추려서 GBP/JPY 매매에 활용했다. 6개월간 승률 71%, 평균 2.4R 달성. 반면 B라는 트레이더는 같은 키워</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-005-f4a5ga.html">구글 틈새 키워드 트래픽 외환 거래 전략만큼이나 정교한 글룸헤이븐 1</a>
+        <p class="post-item__summary">글룸헤이븐 2판(2.0)에서 무법자(Scoundrel)의 '인접 아군 조건' 판정이 1판과 완전히 달라졌다는 사실을 모르고 플레이하다가 시나리오 18에서 파티를 전멸시킨 적이 있습니까?</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <a class="pager__link" href="posts-2.html">2</a>
+      <span class="pager__current">3</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
