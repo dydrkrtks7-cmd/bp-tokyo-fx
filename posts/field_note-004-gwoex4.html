@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>파일 해시와 0.1% 시그널, 다크소울 1 데모 버전에서 찾은 구글 틈새 키워드 전략</title>
-<meta name="description" content="데이터 마이너들이 흔히 찾는 것은 표면적인 스펙보다 파일 내부의 이력서다. 2011 년 3 월 PS3 용 데모 버전인 demo_ps3_v1.02 을 디렉토리 레벨에서 분석할 때, 실행 파일 경로에 숨겨진 리소스 배정 패턴이 명확히 드러난다.">
+  <title>틈새 트래픽 마이크로 차익 전략의 작동 원리와 주의점</title>
+<meta name="description" content="트래픽 차익 투자는 단순히 매수·매도 호가 차이를 노리는 일반 차익거래와는 결이 다르다. 여기서는 특정 시간대에만 발생하는 미세한 유동성 격차, 혹은 통신 경로·라우팅 차이로 생기는 체결 속도 차이를 이용해 짧은 호흡으로 수익을 추구한다.">
   <link rel="canonical" href="https://fx-torihiki.space/posts/field_note-004-gwoex4.html">
   <style>
     body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
@@ -16,8 +16,8 @@
     a:hover { text-decoration: underline; }
   </style>
   <meta property="og:url" content="https://fx-torihiki.space/posts/field_note-004-gwoex4.html">
-  <meta property="og:title" content="파일 해시와 0.1% 시그널, 다크소울 1 데모 버전에서 찾은 구글 틈새 키워드 전략">
-  <meta property="og:description" content="데이터 마이너들이 흔히 찾는 것은 표면적인 스펙보다 파일 내부의 이력서다. 2011 년 3 월 PS3 용 데모 버전인 demo_ps3_v1.02 을 디렉토리 레벨에서 분석할 때, 실행 파일 경로에 숨겨진 리소스 배정 패턴이 명확히 드러난다.">
+  <meta property="og:title" content="틈새 트래픽 마이크로 차익 전략의 작동 원리와 주의점">
+  <meta property="og:description" content="트래픽 차익 투자는 단순히 매수·매도 호가 차이를 노리는 일반 차익거래와는 결이 다르다. 여기서는 특정 시간대에만 발생하는 미세한 유동성 격차, 혹은 통신 경로·라우팅 차이로 생기는 체결 속도 차이를 이용해 짧은 호흡으로 수익을 추구한다.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary">
 </head>
@@ -26,13 +26,19 @@
     <a href="../index.html">← 목록으로 돌아가기</a>
   </header>
   <main>
-    <h1>파일 해시와 0.1% 시그널, 다크소울 1 데모 버전에서 찾은 구글 틈새 키워드 전략</h1>
-    <article>
-      <p>데이터 마이너들이 흔히 찾는 것은 표면적인 스펙보다 파일 내부의 이력서다. 2011 년 3 월 PS3 용 데모 버전인 <code>demo_ps3_v1.02</code> 을 디렉토리 레벨에서 분석할 때, 실행 파일 경로에 숨겨진 리소스 배정 패턴이 명확히 드러난다. 초기 빌드 단계에서는 튜토리얼 영역의 텍스처 압축률이 최종본과 15% 차이가 나는 것을 확인했다.</p>
-<h2>파일 구조의 숨겨진 변수<br><code>item.dat</code> 파일을 스캔하면 데모 버전 전용으로 생성된 임시 무기 모델이 존재한다. 이 모델은 <code>sunlight_spear_legacy.obj</code> 로 기록되어 있으며, 최종 게임에서는 메모리 주소가 재지정되거나 제거되는 경우가 많다. 개발 단계에서 구현되었으나 출시 전 리팩토링 과정에서 누락된 데이터로 추정되지만, 버그 로그 파일의 에러코드 패턴을 통해 그 흔적을 추적할 수 있다.</h2>
-<p><br>dark souls 1, demo version, ps3, firelink shrine, game development, hidden level, darksouls, 2011 release, file structure, (demo</p>
-    </article>
-      <nav class="post-pager" aria-label="글 이동">
+
+<h1>틈새 트래픽 마이크로 차익 전략의 작동 원리와 주의점</h1>
+<article>
+<h2>틈새 트래픽 마이크로 차익이란 무엇인가</h2>
+<p>트래픽 차익 투자는 단순히 매수·매도 호가 차이를 노리는 일반 차익거래와는 결이 다르다. 여기서는 특정 시간대에만 발생하는 미세한 유동성 격차, 혹은 통신 경로·라우팅 차이로 생기는 체결 속도 차이를 이용해 짧은 호흡으로 수익을 추구한다. 시장이 잠잠한 새벽 시간이나 주요 지수 발표 직후처럼, 체결 밀도가 급변하는 구간이 핵심 타깃이 된다.</p>
+<h2>자동화 도구의 역할</h2>
+<p>수초 단위로 변하는 스프레드와 호가 깊이를 사람이 손으로 따라잡기는 어렵다. 대부분 자동화 스크립트나 API 기반 주문 모듈을 통해 진입·청산 조건을 미리 설정해 두고, 조건 충족 시 즉시 체결하는 방식을 택한다. 따라서 전략의 성패는 알고리즘 설계뿐 아니라, 브로커 서버와의 물리적·네트워크적 거리와 체결 품질에 크게 좌우된다.</p>
+<h2>비용 구조와 함정</h2>
+<p>미세한 마진을 겨냥하는 만큼 스프레드, 수수료, 슬리피지 같은 비용 항목이 수익률을 빠르게 잠식한다. 1회당 이익이 0.1틱 수준이라면, 비용이 0.05틱만 더해져도 손익분기점은 사실상 사라진다. 또한 브로커별 거래 제한, 체결 지연 시 강제 청리퀄레이션 가능성, 그리고 환율 노출까지 함께 고려해야 실제 수익을 가늠할 수 있다.</p>
+<h2>접근 시 유의할 점</h2>
+<p>과거 특정 시점에서 잘 작동했던 패턴이 영원하지 않다다는 점을 기억해야 한다. 유동성 공급자·참가자 구성이 바뀌면 틈새 자체가 사라지거나 오히려 함정이 되기도 한다. 소액으로 충분한 로그를 쌓고, 통계적으로 검증된 조건에서만 운용 규모를 키우는 것이 리스크를 관리하는 현실적 방법이다.</p>
+</article>
+    <nav class="post-pager" aria-label="글 이동">
       <a class="post-pager__prev" href="../posts/field_note-004-fxby9a.html">← 구글 틈새 키워드 트래픽 외환 거래 전략</a>
       <a class="post-pager__index" href="../posts.html">글 목록</a>
       <a class="post-pager__next" href="../posts/field_note-004-h8k5sx.html">미국에서 사라진 비밀 파일에 대한 기록 →</a>
